@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variable';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: $secondary_color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $primary_color !important;
+}
+
+.primary-text {
+    font-weight: bolder;
+    color: $primary_color;
+}
+
+.secondary-text {
+    font-weight: bolder;
+    color: $secondary_color;
+}
+
+.tertiary-text {
+    font-weight: bolder;
+    color: $tertiary_color;
+}
+
+.quaternary-text {
+    font-weight: bolder;
+    color: $quaternary-color;
+}
+
+.tertiary-container {
+    background-color: $tertiary_color;
+}
+
+.light-border-bottom {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.light-border-right {
+    border-right: 1px solid #ddd;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.dotted-border-container {
+    border: 4px dotted $secondary_color;
+    padding: 10px;
+}
+
+.dotted-quaternary-border-container {
+    border: 2px dotted $quaternary-color;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.dotted-circular-border {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px dotted $quaternary-color;
+    border-radius: 50%;
+}
+
+.mat-progress-bar-rounded :ng-deep .mat-progress-bar-fill::after {
+    
+        background-color: $primary_color !important;
+        border-radius: 8px;
+
+}
+
+.overflow-table::-webkit-scrollbar {
+    width: 5px;
+}
+
+.overflow-table::-webkit-scrollbar-thumb {
+    background-color: $primary_color;
+    border-radius: 6px;
+}
+
+.overflow-table::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.overflow-table {
+    height: 30vh;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.border-container{
+    border: 1px solid $tertiary_color; 
+    padding: 10px;
+    border-radius: 8px;
+}  
