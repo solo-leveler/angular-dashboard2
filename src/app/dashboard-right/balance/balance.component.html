@@ -1,0 +1,25 @@
+<mat-card>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span class="primary-text">Total Balance</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'ellipsis']"></fa-icon></span>
+        </div>
+    </div>
+    <div fxLayout="row">
+        <span class="primary-text fa-2x mt-3">{{ dashboardService.formatCurrency(dashboardObj?.total_balance)}}</span>
+    </div>
+    <div fxLayout="row" class="mt-3">
+        <mat-progress-bar class="mat-progress-bar-rounded" mode="determinate" [value]="dashboardObj?.payment_done_percentage"></mat-progress-bar>    
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" >
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span class="quaternary-text">Monthly Payment Limit</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <span class="primary-text">{{ dashboardService.formatCurrency(dashboardObj?.payment_done_so_far)}} </span>
+            <span class="quaternary-text"> / {{ dashboardService.formatCurrency(dashboardObj?.monthly_payment_limit)}}</span>
+        </div>
+    </div>
+</mat-card>
