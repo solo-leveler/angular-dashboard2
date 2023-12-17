@@ -1,0 +1,82 @@
+<mat-card class="mt-2">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span class="primary-text">Money Statictics</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'ellipsis']"></fa-icon></span>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mt-2 p-2">
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="5px">
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="quaternary-text">Total Income</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start">
+                <span class="primary-text">{{ dashboardService.formatCurrency(dashboardObj?.total_income.value)}}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="border-0 bg-transparent">
+                    <fa-icon [icon]="['fas', 'arrow-trend-up']" class="fa-2xs" [style.color]="dashboardObj
+                    ?.total_income.trend_color" ></fa-icon>
+                </span>
+                <span [style.color]="dashboardObj
+                ?.total_income.trend_color"> +{{dashboardObj?.total_income?.trend}}% </span>
+                <span class="quaternary-text"> from last month</span>
+
+            </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="5px">
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="quaternary-text">Total Expense</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="primary-text">{{ dashboardService.formatCurrency(dashboardObj?.total_expense.value)}}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="border-0 bg-transparent">
+                    <fa-icon [icon]="['fas', 'arrow-trend-up']" class="fa-2xs" [style.color]="dashboardObj
+                    ?.total_expense.trend_color" ></fa-icon>
+                </span>
+                <span [style.color]="dashboardObj
+                ?.total_expense.trend_color" > +{{ dashboardObj?.total_expense?.trend}} % </span>
+                <span class="quaternary-text">from last month</span>
+    
+            </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="5px">
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="quaternary-text">Total Investment</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="primary-text">{{ dashboardService.formatCurrency(dashboardObj?.total_investment.value)}}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <span class="border-0 bg-transparent">
+                    <fa-icon [icon]="['fas', 'arrow-trend-up']" class="fa-2xs" [style.color]="dashboardObj
+                    ?.total_investment.trend_color" ></fa-icon>
+                </span>
+                <span [style.color]="dashboardObj
+                ?.total_investment.trend_color"> +{{dashboardObj?.total_investment?.trend}} %</span>
+                <span class="quaternary-text">from last month</span>
+    
+            </div>
+        </div>
+        
+    </div>
+    <div class="container overflow-table">
+        <div id="chart">
+            <apx-chart
+              [series]="chartOptions.series"
+              [chart]="chartOptions.chart"
+              [dataLabels]="chartOptions.dataLabels"
+              [plotOptions]="chartOptions.plotOptions"
+              [responsive]="chartOptions.responsive"
+              [xaxis]="chartOptions.xaxis"
+              [legend]="chartOptions.legend"
+              [fill]="chartOptions.fill"
+              [title]="chartOptions.title"
+            ></apx-chart>
+        </div>
+    </div>
+</mat-card>
