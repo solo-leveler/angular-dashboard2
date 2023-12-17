@@ -1,0 +1,28 @@
+<div fxLayout="row" fxLayoutAlign="center center" >
+    <div fxFlex="20%" fxLayout="column" >
+        <div fxLayout="row" fxLayoutAlign="start center" >
+            <span class="input-group-text"><fa-icon [icon]="['fas', 'gem']"></fa-icon></span>
+            <span class="primary-text mx-2">Hexa Bank</span>        
+        </div>
+    </div>
+    <div fxFlex="80%" fxLayout="column" fxLayoutAlign="space-between center" >
+        <mat-card class="w-100">
+            
+            <div fxLayout="row" fxLayoutAlign="space-between center" > 
+                <div>
+                    <span class="primary-text fa-2x" fxLayoutAlign="start">Overview</span>
+                  </div>
+                <div class="input-group w-50">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><fa-icon [icon]="['fas', 'search']"></fa-icon></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <div fxLayout="row" fxLayoutGap="8px">
+                    <span class="input-group-text"><fa-icon [icon]="['fas', 'bell']"></fa-icon></span>
+                    <span class="input-group-text"><fa-icon [icon]="['fas', 'envelope']"></fa-icon></span>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
