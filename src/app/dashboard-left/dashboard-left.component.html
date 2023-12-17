@@ -1,0 +1,93 @@
+<mat-card >
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span class="primary-text fa-2x">My Cards : 1</span>
+            <span class="secondary-text">/2</span>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
+            <span class="input-group-text"><fa-icon [icon]="['fas', 'chevron-left']"></fa-icon></span>
+            <span class="input-group-text"><fa-icon [icon]="['fas', 'chevron-right']"></fa-icon></span>
+        </div>
+    </div>
+    <mat-card class="credit-card">
+        <div fxLayout="column" class="top-half">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <span class="input-group-text border-0 bg-transparent"><fa-icon class="fa-2x" [icon]="['fab', 'gg-circle']" style="color: #ffffff;"></fa-icon></span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <span class="input-group-text border-0 bg-transparent">
+                        <fa-icon [icon]="['fas', 'wifi']" style="color: #ffffff;" class="fa-rotate-90"></fa-icon></span>
+                </div>
+            </div>            
+        </div>
+            
+        <div fxLayout="column" class="bottom-half">
+            <span class="number">&#10033; &#10033; &#10033; &#10033; &#10033; 1234</span>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+                    <span>John Doe</span>
+                </div>
+                <span>12/24</span>
+                <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
+                    <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fab', 'cc-visa']" style="color: #ffffff;" class="fa-2x"></fa-icon></span>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <div fxLayout="row" fxLayoutAlign="center center" class="dotted-border-container light-border-bottom mt-2">
+        <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'circle-plus']"></fa-icon></span>
+        <span class="primary-text">Add New Cards</span>
+    </div>
+    <span class="primary-text mt-2">Quick Actions</span>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="dotted-border-container mt-2 p-2">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'square-plus']"></fa-icon></span>
+            <span class="primary-text">Top Up</span>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'paper-plane']"></fa-icon></span>
+            <span class="primary-text">Transfer</span>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'money-bill']"></fa-icon></span>
+            <span class="primary-text">Withdrawal</span>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mt-2">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span class="primary-text">Saving Plan</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'circle-plus']"></fa-icon></span>
+        </div>
+    </div>
+    <div class="border-container">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="mt-2">
+            <div fxLayout="column" fxLayoutAlign="start center">
+                <span class="input-group-text"><fa-icon [icon]="['fab', 'black-tie']"></fa-icon></span>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="start center">
+                <span class="primary-text">New Suit</span>
+                <span class="tertiary-text">Target $2,000</span>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end center">
+                <span class="input-group-text border-0 bg-transparent"><fa-icon [icon]="['fas', 'ellipsis']"></fa-icon></span>
+            </div>
+        </div>
+        <div class="mt-2">
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="mt-2">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <span class="primary-text">Total : $1,000</span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <span class="tertiary-text">50%</span>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <mat-progress-bar class="mat-progress-bar-rounded" mode="determinate" value="50"></mat-progress-bar>    
+            </div>
+        </div>
+
+    </div>
+</mat-card>
